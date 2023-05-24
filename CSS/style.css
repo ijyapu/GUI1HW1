@@ -1,0 +1,228 @@
+/* File: style.css
+ Assignment: Creating Your First Web Page
+ Bikash Shrestha, UMass Lowell Computer Science, Bikash_Shrestha@student.uml.edu
+ Copyright (c) 2023 by Bikash Shrestha. All rights reserved. May be
+ freely copied or excerpted for educational purposes with credit to the
+ author.
+ Updated by BS on May 22, 2022 at 11:30 PM.
+ Instructor: Professor Wenjin Zhou
+ Help: w3 school (HTML/CSS)
+ Basic Description: This is the First website created using html and css. I took some help from w3school in order to make website more decorated.
+ The website contain four pages which includes Home page (Name), About (Short description of me and my photo), Table (My top 5 movies with rating),
+ and contact (links to connect with me).
+ */
+
+ body {
+  margin: 0;
+  padding: 0;
+}
+
+
+/*--- Header/Navbar ---*/ 
+header {
+  position: fixed;      /* fixed header positon */
+  top: 0;
+  right: 0;
+  background-color: transparent;  
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 1;           /*show navbar over background */
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.navbar li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.navbar li a:hover {
+  background-color: white; /* White background on hover */
+}
+
+
+/*--- Home Page --- */
+.section {
+  padding: 50px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  color: black;
+}
+
+.section h1, .section h2 {
+  font-family: "Arial", sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.home-section {
+  position: relative;   /*determines how the home-section is positioned on the webpage. */
+  background-image: url('../Images/NYC1.jpeg');     /*Photo Credit: Slef */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.home-section .overlay {
+  position: absolute;   /* determines how the overlay element is positioned within the home-section. */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* overlay a black color that is partially see-through. */
+}
+
+.home-section .content {
+  z-index: 1; /* Sets the order in which the content within the home-section is displayed, with higher values appearing on top of lower values. */
+}
+
+/*--- About Page ---*/
+.about-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.container {
+  width: 80%;
+  max-width: 800px;
+}
+
+.container h2  {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container p  {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-image {
+  text-align: center;
+  margin-right: 20px;
+}
+
+.profile-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.description {
+  flex-grow: 1; /* Allows the description to grow and fill the remaining space */
+}
+
+.description p {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+}
+
+
+/*--- Table Page ---*/
+.table {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+table {
+  height: 80%;
+  width:80%;
+  max-width: 1000px;
+  border-collapse: collapse; /* removes the visible borders between cells in a table, creating a seamless appearance */
+
+}
+
+caption {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+  background-color: white;
+}
+
+
+/*--- Contact Page ---*/
+.contact {
+  height: 400px;
+  padding: 50px;
+  text-align: center;
+  background-color: white;
+  color: black;
+  font-size: 24px;
+}
+
+.contact h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.contact p {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1.5; /* Sets the line height of the p elements within the contact section */
+  margin-bottom: 20px;
+}
+
+
+.logo{
+  height: 230px;
+  width: auto;
+}
+
+
+/*--- Footer ---*/
+footer {
+  text-align: center;
+  padding: 5px;
+  background-color: black;
+  color: white;
+  
+}
+
+.validation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
